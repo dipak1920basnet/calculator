@@ -28,7 +28,7 @@ body{
                 
                 inset 0 0 0px 20px rgba(0, 0, 0, 0.5); */
 }
-.screen, .bottom{
+.ac,.delete,.screen, .bottom{
     height:10vh;
     width:100%;
     /* border:2px solid black; */

@@ -1,34 +1,26 @@
-document.addEventListener('DOMContentLoaded',()=>{
-    function add(a,b){
-        return a + b
-    }
-    function subtract(a,b){
-        return a - b
-    }
-    function multiply(a,b){
-        return a * b
-    }
-    function divide(a,b){
-        return a / b
-    }
+document.addEventListener('DOMContentLoaded', ()=>{
+       const numberButtons = document.querySelectorAll('button[data-action="number"]');
+       const operatorbuttons = document.querySelectorAll('button[data-action="add"] , button[data-action="divide"] , button[data-action="multiply"] , button[data-action="subtract"]')
+       const screen = document.querySelector('.screen');
+        let number_array = []; // Initialize the variable to store the number in the form of array
+       
+        
 
-    let first_number;
-    let operator;  
-    let second_number; 
+        // Add a click event listener to each number button
+        numberButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Append the button's text (number) to the 'number' variable
+                 number_array.push(button.textContent);
+                 let number = parseInt(number_array.map(String).join(''), 10);
+                 screen.innerHTML = number;
+                console.log(number_array);
+            });
+        });
+        operatorbuttons.forEach(button => {
+            button.addEventListener('click',() =>{
+                screen.innerHTML = button.textContent;
+            })
+        })
 
-    function operate(first_number, operator,second_number){
-        if (operator == "+"){
-            add(first_number,second_number)
-        }
-        else if (operator == "-"){
-            subtract(first_number,second_number)
-        }
-        else if (operator == "*"){
-            multiply(first_number,second_number)
-        }
-        else{
-            divide(first_number,second_number)
-        }
-    }
-    operate(8,"+",9)
 })
+
