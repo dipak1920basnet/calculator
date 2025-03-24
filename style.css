@@ -45,7 +45,14 @@ body{
 }
 .screen{
     background-color: white;
+    color: black;
     
+}
+.events
+{
+    height: 200px;
+    background-color: #999;
+    font-size: large;
 }
 .bottom{
     height: 45vh;
@@ -60,17 +67,16 @@ body{
     /* padding: 4px; */   
 }
 .ac, .delete{
+    height: 8vh;
+    width: 40%;
+    margin: 6px;
+}
+.ac>button, .delete>button{
     border: 2px solid yellow;
     border-radius: 50%;
     height: 8vh;
     width: 40%;
     margin: 6px;
-    box-shadow: 1px 1px 0px #999,
-                2px 2px 0px #999,
-                3px 3px 0px #999,
-                4px 4px 0px #999,
-                5px 5px 0px #999,
-                6px 6px 0px #999;
 }
 .first, .second, .third, .fourth{
     display: flex;
